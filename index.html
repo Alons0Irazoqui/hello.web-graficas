@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="GRÁFICAS Diseño y Publicidad en Zacatecas: impresión digital, gran formato, DTF, sublimación, rotulación, corte láser, papelería y publicidad exterior. Cotiza por WhatsApp.">
+<meta name="keywords" content="imprenta Zacatecas, diseño gráfico Zacatecas, impresión DTF, lona impresa, vinil impreso, sublimación, rotulación vehicular, corte láser, GRÁFICAS Diseño y Publicidad">
+<meta property="og:title" content="GRÁFICAS Diseño y Publicidad | Imprenta en Zacatecas">
+<meta property="og:description" content="Soluciones de impresión, diseño y publicidad para negocios: DTF, sublimación, gran formato, rotulación, láser y papelería.">
+<meta property="og:image" content="assets/logo-graficas.png">
+<title>GRÁFICAS Diseño y Publicidad | Imprenta y Publicidad en Zacatecas</title>
+<link rel="icon" type="image/png" href="assets/logo-graficas-favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cyan: #00AEEF;
+  --magenta: #EC008C;
+  --yellow: #FFD100;
+  --black: #0A0A0A;
+  --ink: #101114;
+  --graphite: #191A1F;
+  --muted: #62666F;
+  --line: rgba(10,10,10,0.1);
+  --line-dark: rgba(255,255,255,0.12);
+  --white: #FFFFFF;
+  --soft: #F6F7F9;
+  --soft-2: #ECEFF3;
+  --cyan-soft: rgba(0,174,239,0.13);
+  --magenta-soft: rgba(236,0,140,0.12);
+  --yellow-soft: rgba(255,209,0,0.16);
+  --font-head: 'Montserrat', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --ease-out: cubic-bezier(0.22,1,0.36,1);
+  --ease-inout: cubic-bezier(0.65,0,0.35,1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; border: none; background: none; }
+ul { list-style: none; }
+
+#loader {
+  position: fixed; inset: 0; z-index: 9999;
+  display: grid; place-items: center;
+  background:
+    radial-gradient(circle at 28% 26%, rgba(0,174,239,0.22), transparent 26%),
+    radial-gradient(circle at 74% 58%, rgba(236,0,140,0.18), transparent 30%),
+    linear-gradient(145deg, #050505, #15161b 58%, #050505);
+  transition: opacity 1s var(--ease-out), visibility 1s;
+}
+#loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+.loader-shell {
+  width: min(520px, 82vw);
+  text-align: center;
+  position: relative;
+  animation: loaderEnter 0.9s var(--ease-out) both;
+}
+.loader-shell::before {
+  content: '';
+  position: absolute; inset: -42px;
+  border: 1px solid rgba(255,255,255,0.11);
+  transform: skew(-8deg);
+  animation: scannerFrame 2.6s ease-in-out infinite;
+}
+.loader-logo {
+  width: min(390px, 78vw);
+  margin: 0 auto;
+  filter: drop-shadow(0 18px 48px rgba(0,174,239,0.24));
+}
+.loader-word {
+  margin-top: 20px;
+  color: rgba(255,255,255,0.78);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 11px;
+  font-weight: 800;
+}
+.loader-bar {
+  height: 3px;
+  width: 170px;
+  margin: 24px auto 0;
+  background: rgba(255,255,255,0.13);
+  overflow: hidden;
+}
+.loader-bar span {
+  display: block; height: 100%; width: 0;
+  background: linear-gradient(90deg, var(--cyan), var(--magenta), var(--yellow));
+  animation: loadFill 2.1s var(--ease-inout) 0.25s forwards;
+}
+@keyframes loaderEnter { from { opacity: 0; transform: translateY(18px) scale(.96); } to { opacity: 1; transform: none; } }
+@keyframes scannerFrame { 0%,100% { opacity:.35; clip-path: inset(0 0 88% 0); } 50% { opacity:1; clip-path: inset(86% 0 0 0); } }
+@keyframes loadFill { to { width: 100%; } }
+
+#mobile-menu {
+  position: fixed; inset: 0; z-index: 999;
+  background: rgba(255,255,255,0.98);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px;
+  opacity: 0; visibility: hidden;
+  transition: opacity .4s var(--ease-out), visibility .4s;
+}
+#mobile-menu.open { opacity: 1; visibility: visible; }
+.mob-logo img { width: min(330px, 72vw); margin-bottom: 14px; }
+#mobile-menu a {
+  font-family: var(--font-head);
+  font-size: clamp(24px, 8vw, 42px);
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+#nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  padding: 18px 5%;
+  display: flex; align-items: center; justify-content: space-between; gap: 26px;
+  transition: background .45s var(--ease-out), padding .35s var(--ease-out), box-shadow .35s, backdrop-filter .45s;
+}
+#nav.scrolled {
+  padding: 10px 5%;
+  background: rgba(255,255,255,0.86);
+  backdrop-filter: blur(22px) saturate(170%);
+  -webkit-backdrop-filter: blur(22px) saturate(170%);
+  box-shadow: 0 1px 0 rgba(10,10,10,0.08), 0 18px 50px rgba(10,10,10,0.06);
+}
+.nav-logo { display: flex; align-items: center; gap: 14px; min-width: 236px; }
+.nav-logo img { width: clamp(180px, 17vw, 265px); height: auto; }
+.nav-links { display: flex; align-items: center; justify-content: center; gap: clamp(18px, 2.6vw, 36px); }
+.nav-links a {
+  font-size: 11px; font-weight: 800; letter-spacing: 1.9px; text-transform: uppercase;
+  color: rgba(10,10,10,0.68);
+  transition: color .25s;
+}
+.nav-links a:hover { color: var(--black); }
+.nav-cta, .btn-primary, .form-submit {
+  color: var(--black);
+  background: linear-gradient(90deg, var(--cyan), var(--yellow));
+  box-shadow: 0 16px 38px rgba(0,174,239,0.24);
+}
+.nav-cta {
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-size: 11px; letter-spacing: 1.6px; text-transform: uppercase; font-weight: 900;
+  white-space: nowrap;
+  transition: transform .28s var(--ease-out), box-shadow .28s;
+}
+.nav-cta:hover { transform: translateY(-2px); box-shadow: 0 18px 42px rgba(236,0,140,0.22); }
+.nav-ham { display: none; flex-direction: column; gap: 5px; padding: 8px; }
+.nav-ham span { width: 28px; height: 2px; background: var(--black); transition: transform .3s, opacity .3s; }
+.nav-ham.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+.nav-ham.open span:nth-child(2) { opacity: 0; }
+.nav-ham.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+#hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex; align-items: center;
+  overflow: hidden;
+  background:
+    linear-gradient(105deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.82) 46%, rgba(10,10,10,0.08) 100%),
+    url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1900&q=85') center / cover fixed;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.92), rgba(255,255,255,.55), rgba(255,255,255,.82)),
+    repeating-linear-gradient(90deg, rgba(10,10,10,.04) 0 1px, transparent 1px 94px);
+  z-index: 1;
+}
+#particle-canvas, .section-particles { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+.hero-flash {
+  position: absolute; top: 0; left: -60%; z-index: 3;
+  width: 60%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0,174,239,.18), rgba(255,209,0,.2), transparent);
+  transform: skewX(-18deg);
+  animation: heroFlash 2.7s ease-out 1.6s forwards;
+}
+.hero-ring {
+  position: absolute; right: -10vw; top: 52%; z-index: 2;
+  border: 1px solid rgba(10,10,10,.07);
+  transform: translateY(-50%) rotate(0deg);
+  pointer-events: none;
+}
+.ring-1 { width: 680px; height: 680px; animation: ringRot 34s linear infinite; }
+.ring-2 { width: 470px; height: 470px; right: 2vw; border-color: rgba(0,174,239,.24); animation: ringRot 24s linear infinite reverse; }
+.ring-3 { width: 270px; height: 270px; right: 9vw; border-color: rgba(236,0,140,.18); animation: ringRot 17s linear infinite; }
+.hero-content {
+  width: min(1180px, 90vw);
+  margin: 0 auto;
+  padding: 140px 0 72px;
+  position: relative; z-index: 4;
+}
+.hero-eyebrow, .section-tag {
+  display: inline-flex; align-items: center; gap: 12px;
+  color: var(--magenta);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: 900;
+}
+.hero-eyebrow::before, .section-tag::before {
+  content: ''; width: 34px; height: 3px;
+  background: linear-gradient(90deg, var(--cyan), var(--magenta), var(--yellow), var(--black));
+}
+.hero-title {
+  margin-top: 24px;
+  font-family: var(--font-head);
+  font-weight: 900;
+  line-height: .92;
+  letter-spacing: 0;
+  font-size: clamp(48px, 8.4vw, 112px);
+  max-width: 980px;
+}
+.hero-title em, .section-title em, .about-title em, .contact-title em, .exp-tagline em {
+  font-style: normal;
+  background: linear-gradient(90deg, var(--cyan), var(--magenta), var(--yellow));
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: cmykShift 5.2s ease-in-out infinite;
+}
+.hero-subtitle {
+  margin-top: 18px;
+  color: var(--graphite);
+  font-size: clamp(20px, 2.6vw, 34px);
+  font-weight: 800;
+}
+.typer-word { color: var(--cyan); }
+.typer-cursor {
+  display: inline-block; width: 3px; height: .9em; margin-left: 4px;
+  background: var(--magenta); vertical-align: middle;
+  animation: cursorBlink .75s ease-in-out infinite;
+}
+.hero-desc {
+  max-width: 640px;
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 17px;
+}
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
+.btn-primary, .btn-ghost, .btn-ghost-dark, .form-submit {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 52px;
+  padding: 0 28px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  font-weight: 900;
+  transition: transform .28s var(--ease-out), box-shadow .28s, border-color .28s, color .28s;
+}
+.btn-primary:hover, .form-submit:hover { transform: translateY(-2px); box-shadow: 0 20px 44px rgba(236,0,140,0.2); }
+.btn-ghost {
+  color: var(--black);
+  border: 1px solid rgba(10,10,10,.18);
+  background: rgba(255,255,255,.54);
+}
+.btn-ghost:hover, .btn-ghost-dark:hover { transform: translateY(-2px); border-color: var(--magenta); color: var(--magenta); }
+.hero-proof {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px;
+  max-width: 830px;
+  margin-top: 52px;
+  border: 1px solid rgba(10,10,10,.08);
+  background: rgba(10,10,10,.08);
+}
+.proof-item {
+  background: rgba(255,255,255,.72);
+  backdrop-filter: blur(16px);
+  padding: 18px 20px;
+}
+.proof-item strong {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 18px;
+  line-height: 1.15;
+}
+.proof-item span { display: block; margin-top: 5px; color: var(--muted); font-size: 12px; }
+.hero-scroll {
+  position: absolute; right: 5%; bottom: 32px; z-index: 4;
+  display: flex; align-items: center; gap: 12px;
+  color: rgba(10,10,10,.46);
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-weight: 800;
+}
+.scroll-line { width: 72px; height: 2px; background: linear-gradient(90deg, var(--cyan), var(--magenta), var(--yellow)); animation: scrollPulse 2s ease-in-out infinite; }
+@keyframes heroFlash { to { left: 120%; opacity: 0; } }
+@keyframes ringRot { to { transform: translateY(-50%) rotate(360deg); } }
+@keyframes cmykShift { 0%,100% { background-position: 0% center; } 50% { background-position: 100% center; } }
+@keyframes cursorBlink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+@keyframes scrollPulse { 0%,100% { opacity:.25; } 50% { opacity: 1; } }
+
+.container { max-width: 1280px; margin: 0 auto; padding: 0 5%; }
+section { position: relative; overflow: hidden; }
+.section-header { text-align: center; max-width: 760px; margin: 0 auto 64px; }
+.section-tag { margin-bottom: 16px; }
+.section-tag.no-lines::before { display: none; }
+.section-title {
+  font-family: var(--font-head);
+  font-size: clamp(34px, 5vw, 66px);
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+.section-lead { margin: 18px auto 0; color: var(--muted); font-size: 16px; max-width: 620px; }
+
+#about { padding: 118px 0; background: var(--soft); }
+.about-grid { display: grid; grid-template-columns: .88fr 1.12fr; gap: 72px; align-items: center; }
+.about-visual {
+  min-height: 610px;
+  background:
+    linear-gradient(180deg, rgba(10,10,10,.18), rgba(10,10,10,.72)),
+    url('https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=1200&q=85') center / cover fixed;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 28px 80px rgba(10,10,10,.14);
+}
+.about-badge {
+  position: absolute; left: 28px; bottom: 28px; right: 28px;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(18px);
+  padding: 24px;
+  border: 1px solid rgba(255,255,255,.54);
+}
+.about-badge strong {
+  font-family: var(--font-head);
+  font-size: clamp(38px, 6vw, 70px);
+  line-height: .9;
+}
+.about-badge span { display: block; margin-top: 10px; color: var(--muted); font-weight: 700; }
+.about-title {
+  font-family: var(--font-head);
+  font-size: clamp(32px, 4vw, 56px);
+  line-height: 1.02;
+  font-weight: 900;
+}
+.about-text { margin-top: 20px; color: var(--muted); font-size: 16px; }
+.why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 34px; }
+.why-card {
+  min-height: 205px;
+  background: var(--white);
+  border: 1px solid rgba(10,10,10,.08);
+  border-radius: 8px;
+  padding: 26px;
+  position: relative;
+  overflow: hidden;
+  transition: transform .35s var(--ease-out), box-shadow .35s, border-color .35s;
+}
+.why-card:hover { transform: translateY(-5px); box-shadow: 0 18px 46px rgba(10,10,10,.08); border-color: rgba(0,174,239,.36); }
+.why-num {
+  position: absolute; right: 14px; top: 2px;
+  font-family: var(--font-head);
+  font-size: 72px;
+  line-height: 1;
+  color: rgba(10,10,10,.06);
+  font-weight: 900;
+}
+.why-card h3 { position: relative; font-family: var(--font-head); font-size: 18px; line-height: 1.15; margin-bottom: 12px; }
+.why-card p { position: relative; color: var(--muted); font-size: 14px; }
+
+#rooms { padding: 118px 0; background: var(--black); color: var(--white); }
+#rooms::before, #contact::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 16% 18%, rgba(0,174,239,.2), transparent 24%),
+    radial-gradient(circle at 82% 64%, rgba(236,0,140,.18), transparent 28%);
+  pointer-events: none;
+}
+#rooms .section-lead, #gallery .section-lead, #contact .section-lead { color: rgba(255,255,255,.62); }
+.rooms-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; position: relative; z-index: 3; }
+.room-card { position: relative; min-height: 435px; overflow: hidden; border-radius: 8px; border: 1px solid rgba(255,255,255,.1); }
+.room-card-inner, .room-card-img, .room-overlay { position: absolute; inset: 0; }
+.room-card-img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .95s var(--ease-out), filter .55s;
+}
+.room-card:hover .room-card-img { transform: scale(1.08); filter: saturate(1.12); }
+.room-overlay { background: linear-gradient(180deg, rgba(10,10,10,.1), rgba(10,10,10,.92)); z-index: 1; }
+.room-pills {
+  position: absolute; top: 18px; left: 18px; right: 18px; z-index: 2;
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+.room-pill {
+  padding: 7px 9px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.13);
+  backdrop-filter: blur(14px);
+  color: rgba(255,255,255,.86);
+  font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.4px;
+}
+.room-content {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
+  padding: 30px;
+}
+.room-tag { color: var(--yellow); font-size: 11px; text-transform: uppercase; letter-spacing: 2px; font-weight: 900; }
+.room-name { margin-top: 10px; font-family: var(--font-head); font-size: 29px; line-height: 1; }
+.room-desc { margin-top: 14px; color: rgba(255,255,255,.68); font-size: 14px; }
+.room-price { margin-top: 18px; color: var(--cyan); font-weight: 900; font-size: 13px; letter-spacing: 1.6px; text-transform: uppercase; }
+
+#amenities { padding: 118px 0; background: var(--white); }
+.amenities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.amenity-card {
+  background: var(--soft);
+  border: 1px solid rgba(10,10,10,.08);
+  border-radius: 8px;
+  padding: 34px;
+  min-height: 270px;
+  position: relative;
+  overflow: hidden;
+  transition: transform .35s var(--ease-out), box-shadow .35s;
+}
+.amenity-card::after {
+  content: '';
+  position: absolute; left: 0; bottom: 0; height: 4px; width: 100%;
+  background: linear-gradient(90deg, var(--cyan), var(--magenta), var(--yellow));
+  transform: scaleX(.22);
+  transform-origin: left;
+  transition: transform .35s var(--ease-out);
+}
+.amenity-card:hover { transform: translateY(-5px); box-shadow: 0 18px 44px rgba(10,10,10,.08); }
+.amenity-card:hover::after { transform: scaleX(1); }
+.amenity-icon {
+  width: 62px; height: 62px;
+  display: grid; place-items: center;
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--magenta);
+  box-shadow: 0 12px 30px rgba(10,10,10,.08);
+  margin-bottom: 28px;
+}
+.amenity-icon svg { width: 30px; height: 30px; }
+.amenity-name { font-family: var(--font-head); font-size: 20px; line-height: 1.15; }
+.amenity-desc { margin-top: 12px; color: var(--muted); font-size: 14px; }
+.step-label {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: var(--cyan);
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+#experience {
+  padding: 92px 0;
+  background:
+    linear-gradient(100deg, rgba(10,10,10,.9), rgba(10,10,10,.72)),
+    url('https://images.unsplash.com/photo-1601001435957-74f0958a93fb?auto=format&fit=crop&w=1900&q=85') center / cover fixed;
+  color: var(--white);
+}
+#experience::after {
+  content: 'GRÁFICAS';
+  position: absolute; inset: auto 0 -46px;
+  font-family: var(--font-head);
+  font-size: clamp(74px, 14vw, 190px);
+  font-weight: 900;
+  color: rgba(255,255,255,.045);
+  text-align: center;
+  pointer-events: none;
+}
+.exp-inner { display: flex; align-items: center; justify-content: space-between; gap: 50px; position: relative; z-index: 2; }
+.exp-tagline { font-family: var(--font-head); font-size: clamp(32px, 4.6vw, 64px); line-height: 1; font-weight: 900; }
+.exp-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; min-width: min(700px, 100%); }
+.exp-stat {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  backdrop-filter: blur(16px);
+  padding: 24px 18px;
+  text-align: center;
+}
+.exp-stat strong { display: block; font-family: var(--font-head); font-size: clamp(34px, 4vw, 58px); line-height: .95; }
+.exp-stat span { display: block; margin-top: 10px; color: rgba(255,255,255,.62); font-size: 11px; letter-spacing: 1.4px; text-transform: uppercase; font-weight: 900; }
+
+#gallery { padding: 118px 0; background: var(--graphite); color: var(--white); }
+.gallery-grid {
+  display: grid; grid-template-columns: repeat(12, 1fr); grid-template-rows: 330px 260px; gap: 6px;
+}
+.gallery-item {
+  position: relative; overflow: hidden; border-radius: 8px;
+  background: var(--black);
+}
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .85s var(--ease-out), filter .45s; }
+.gallery-item:hover img { transform: scale(1.07); filter: brightness(.74) saturate(1.1); }
+.gi-label {
+  position: absolute; left: 18px; right: 18px; bottom: 18px;
+  padding: 14px 16px;
+  background: rgba(10,10,10,.68);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,.12);
+  font-weight: 800;
+}
+.gi-1 { grid-column: 1/7; }
+.gi-2 { grid-column: 7/10; }
+.gi-3 { grid-column: 10/13; }
+.gi-4 { grid-column: 1/5; }
+.gi-5 { grid-column: 5/9; }
+.gi-6 { grid-column: 9/13; }
+
+#testimonios { padding: 118px 0; background: var(--soft); }
+.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.review-card {
+  background: var(--white);
+  border: 1px solid rgba(10,10,10,.08);
+  border-radius: 8px;
+  padding: 34px;
+  min-height: 250px;
+  transition: transform .35s var(--ease-out), box-shadow .35s;
+}
+.review-card:hover { transform: translateY(-5px); box-shadow: 0 18px 44px rgba(10,10,10,.08); }
+.review-stars { color: var(--yellow); font-size: 28px; line-height: 1; margin-bottom: 18px; }
+.review-text { color: var(--muted); }
+.review-author { margin-top: 24px; display: flex; align-items: center; gap: 12px; }
+.review-avatar {
+  width: 42px; height: 42px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--cyan), var(--magenta));
+  display: grid; place-items: center;
+  color: var(--white); font-weight: 900;
+}
+.review-name strong { display: block; }
+.review-name span { color: var(--muted); font-size: 13px; }
+.btn-ghost-dark { margin-top: 44px; border: 1px solid rgba(10,10,10,.18); }
+
+#contact { padding: 118px 0; background: var(--black); color: var(--white); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 58px; align-items: start; position: relative; z-index: 2; }
+.contact-title { font-family: var(--font-head); font-size: clamp(28px, 3.4vw, 46px); line-height: 1.05; font-weight: 900; }
+.contact-sub { margin-top: 15px; color: rgba(255,255,255,.62); }
+#booking-form { margin-top: 32px; display: flex; flex-direction: column; gap: 14px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.form-group { display: flex; flex-direction: column; gap: 8px; }
+.form-group label { color: var(--cyan); text-transform: uppercase; letter-spacing: 1.8px; font-size: 11px; font-weight: 900; }
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.14);
+  color: var(--white);
+  border-radius: 8px;
+  padding: 14px 16px;
+  outline: none;
+  transition: border-color .25s, box-shadow .25s, background .25s;
+}
+.form-group select, .form-group option { background: #17181d; color: var(--white); }
+.form-group textarea { min-height: 112px; resize: vertical; }
+.form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,.32); }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 4px rgba(0,174,239,.13);
+  background: rgba(255,255,255,.1);
+}
+.form-submit { width: 100%; margin-top: 6px; }
+.channels { display: flex; flex-direction: column; gap: 10px; margin-top: 30px; }
+.channel {
+  display: flex; align-items: center; gap: 16px;
+  padding: 18px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 8px;
+  transition: transform .28s var(--ease-out), border-color .28s, background .28s;
+}
+.channel:hover { transform: translateY(-2px); border-color: rgba(0,174,239,.45); background: rgba(255,255,255,.11); }
+.ch-icon {
+  width: 44px; height: 44px; flex: 0 0 auto;
+  display: grid; place-items: center;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(0,174,239,.2), rgba(236,0,140,.18));
+  color: var(--yellow);
+}
+.ch-icon svg { width: 21px; height: 21px; }
+.ch-info strong { display: block; }
+.ch-info span { display: block; color: rgba(255,255,255,.62); font-size: 13px; }
+.ch-arrow { margin-left: auto; color: rgba(255,255,255,.45); }
+.map-box {
+  margin-top: 18px;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,.12);
+  height: 310px;
+}
+.map-box iframe { width: 100%; height: 100%; border: 0; filter: grayscale(.2) contrast(1.05); }
+.contact-quote {
+  margin-top: 20px;
+  padding: 22px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(0,174,239,.12), rgba(236,0,140,.1));
+  border: 1px solid rgba(255,255,255,.12);
+  color: rgba(255,255,255,.72);
+}
+
+footer { background: #050505; color: var(--white); padding: 70px 5% 32px; border-top: 1px solid rgba(255,255,255,.12); }
+.footer-top { display: flex; justify-content: space-between; gap: 56px; flex-wrap: wrap; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.1); }
+.footer-brand { max-width: 360px; }
+.footer-logo-wrap img { width: min(310px, 70vw); filter: drop-shadow(0 12px 30px rgba(0,174,239,.18)); }
+.footer-brand p { margin-top: 18px; color: rgba(255,255,255,.54); }
+.footer-col h4 { color: var(--cyan); text-transform: uppercase; letter-spacing: 2px; font-size: 12px; margin-bottom: 16px; }
+.footer-col ul { display: flex; flex-direction: column; gap: 9px; }
+.footer-col a { color: rgba(255,255,255,.58); font-size: 14px; transition: color .25s; }
+.footer-col a:hover { color: var(--white); }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; padding-top: 28px; }
+.footer-bottom p { color: rgba(255,255,255,.42); font-size: 12px; }
+.social-links { display: flex; gap: 10px; }
+.social-link { width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(255,255,255,.14); display: grid; place-items: center; color: rgba(255,255,255,.62); transition: border-color .25s, color .25s; }
+.social-link:hover { border-color: var(--cyan); color: var(--cyan); }
+.social-link svg { width: 15px; height: 15px; }
+
+#wa-float {
+  position: fixed; right: 22px; bottom: 24px; z-index: 900;
+  width: 62px; height: 62px; border-radius: 50%;
+  background: #25D366;
+  display: grid; place-items: center;
+  box-shadow: 0 16px 36px rgba(37,211,102,.34);
+  transition: transform .28s var(--ease-out), box-shadow .28s;
+}
+#wa-float:hover { transform: translateY(-4px) scale(1.04); box-shadow: 0 20px 44px rgba(37,211,102,.44); }
+#wa-float svg { width: 30px; height: 30px; fill: white; position: relative; z-index: 2; }
+.wa-ring, .wa-ring-2 { position: absolute; inset: -7px; border-radius: 50%; background: rgba(37,211,102,.2); animation: waRing 2.5s ease-in-out infinite; }
+.wa-ring-2 { inset: -15px; opacity: .55; animation-delay: .65s; }
+@keyframes waRing { 0%,100% { transform: scale(1); opacity: .72; } 50% { transform: scale(1.18); opacity: 0; } }
+
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity .85s var(--ease-out), transform .85s var(--ease-out); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.d1 { transition-delay: .1s; }
+.d2 { transition-delay: .2s; }
+.d3 { transition-delay: .3s; }
+.d4 { transition-delay: .4s; }
+
+@media (max-width: 1120px) {
+  .nav-links { display: none; }
+  .nav-ham { display: flex; }
+  .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  .exp-inner { flex-direction: column; align-items: flex-start; }
+  .exp-stats { width: 100%; }
+}
+@media (max-width: 880px) {
+  #hero { background-attachment: scroll; }
+  .nav-cta { display: none; }
+  .hero-proof { grid-template-columns: 1fr; }
+  .rooms-grid, .amenities-grid, .reviews-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .gi-1,.gi-2,.gi-3,.gi-4,.gi-5,.gi-6 { grid-column: auto; }
+  .gallery-item img { height: 240px; }
+  .exp-stats { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  #nav { padding: 12px 4%; }
+  .nav-logo { min-width: 0; }
+  .nav-logo img { width: min(235px, 67vw); }
+  .hero-content { width: 92vw; padding-top: 132px; }
+  .hero-actions { flex-direction: column; }
+  .btn-primary, .btn-ghost { width: 100%; }
+  .why-grid, .form-row, .exp-stats, .gallery-grid { grid-template-columns: 1fr; }
+  .about-visual { min-height: 450px; background-attachment: scroll; }
+  .room-card { min-height: 390px; }
+  .footer-top { flex-direction: column; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<div id="loader" role="status" aria-label="Cargando GRÁFICAS Diseño y Publicidad">
+  <div class="loader-shell">
+    <img class="loader-logo" src="assets/logo-graficas.png" alt="GRÁFICAS Diseño y Publicidad">
+    <p class="loader-word">Cargando...</p>
+    <div class="loader-bar"><span></span></div>
+  </div>
+</div>
+
+<div id="mobile-menu" role="dialog" aria-label="Menú principal">
+  <div class="mob-logo"><img src="assets/logo-graficas.png" alt="GRÁFICAS Diseño y Publicidad"></div>
+  <a href="#about" onclick="closeMob()">Por qué elegirnos</a>
+  <a href="#rooms" onclick="closeMob()">Servicios</a>
+  <a href="#amenities" onclick="closeMob()">Proceso</a>
+  <a href="#gallery" onclick="closeMob()">Galería</a>
+  <a href="#contact" onclick="closeMob()">Contacto</a>
+</div>
+
+<nav id="nav" role="navigation" aria-label="Navegación principal">
+  <a href="#" class="nav-logo" aria-label="GRÁFICAS Diseño y Publicidad - Inicio">
+    <img src="assets/logo-graficas.png" alt="Logo GRÁFICAS Diseño y Publicidad">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">Por qué elegirnos</a></li>
+    <li><a href="#rooms">Servicios</a></li>
+    <li><a href="#amenities">Proceso</a></li>
+    <li><a href="#gallery">Galería</a></li>
+    <li><a href="#contact">Contacto</a></li>
+  </ul>
+  <a href="https://wa.me/5214921067050" class="nav-cta" target="_blank" rel="noopener">WhatsApp</a>
+  <button class="nav-ham" id="ham" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<section id="hero" aria-label="Bienvenida a GRÁFICAS Diseño y Publicidad">
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <div class="hero-ring ring-1" aria-hidden="true"></div>
+  <div class="hero-ring ring-2" aria-hidden="true"></div>
+  <div class="hero-ring ring-3" aria-hidden="true"></div>
+  <div class="hero-flash" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow reveal">Imprenta, diseño y publicidad en Zacatecas</p>
+    <h1 class="hero-title reveal d1">Haz visible tu marca con impresión <em>premium</em></h1>
+    <p class="hero-subtitle reveal d2">Producción para negocios, eventos y campañas en&nbsp;<span id="typer" class="typer-word"></span><span class="typer-cursor" aria-hidden="true"></span></p>
+    <p class="hero-desc reveal d3">En GRÁFICAS Diseño y Publicidad transformamos ideas en piezas listas para vender: DTF, sublimación, lona HD, vinil, rotulación, corte láser, papelería y publicidad exterior.</p>
+    <div class="hero-actions reveal d4">
+      <a href="#contact" class="btn-primary">Solicitar cotización</a>
+      <a href="#rooms" class="btn-ghost">Ver servicios</a>
+    </div>
+    <div class="hero-proof reveal d4">
+      <div class="proof-item"><strong>Envíos a todo el país</strong><span>Disponible en impresión textil DTF.</span></div>
+      <div class="proof-item"><strong>Lona HD el mismo día</strong><span>Servicio identificado en piezas publicitarias.</span></div>
+      <div class="proof-item"><strong>Atención por WhatsApp</strong><span>Cotiza directo con el taller.</span></div>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true"><span>Scroll</span><div class="scroll-line"></div></div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-badge">
+          <strong>CMYK</strong>
+          <span>Color, precisión y presencia visual para marcas que necesitan verse profesionales.</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <p class="section-tag no-lines reveal">Por qué elegirnos</p>
+        <h2 class="about-title reveal d1">Publicidad impresa con enfoque de <em>negocio</em></h2>
+        <p class="about-text reveal d2">GRÁFICAS reúne diseño, impresión y producción publicitaria para resolver desde una pieza urgente hasta una campaña completa para negocio, evento o punto de venta.</p>
+        <p class="about-text reveal d2">El objetivo es simple: que cada playera, lona, vinil, tarjeta, taza, termo, bandera o rótulo comunique bien, se vea nítido y ayude a vender.</p>
+        <div class="why-grid">
+          <article class="why-card reveal"><span class="why-num">01</span><h3>Amplia línea de producción</h3><p>DTF, sublimación, gran formato, vinil, láser, papelería y publicidad exterior en un solo lugar.</p></article>
+          <article class="why-card reveal d1"><span class="why-num">02</span><h3>Diseño + publicidad</h3><p>No solo imprimen: preparan piezas con intención visual para marcas, promociones y comunicación comercial.</p></article>
+          <article class="why-card reveal d2"><span class="why-num">03</span><h3>Formatos para vender</h3><p>Soluciones para fachadas, vitrinas, autos, stands, uniformes, regalos promocionales y papelería.</p></article>
+          <article class="why-card reveal d3"><span class="why-num">04</span><h3>Cotización directa</h3><p>La conversación inicia por WhatsApp para definir producto, cantidad, medidas, archivo y tiempos.</p></article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="rooms" aria-labelledby="rooms-title">
+  <canvas class="section-particles" aria-hidden="true"></canvas>
+  <div class="container">
+    <div class="section-header">
+      <p class="section-tag reveal">Servicios y productos</p>
+      <h2 class="section-title reveal d1" id="rooms-title">Soluciones para imprimir, personalizar y <em>destacar</em></h2>
+      <p class="section-lead reveal d2">Servicios identificados en la información proporcionada por el cliente. Los precios promocionales no se publican porque deben confirmarse antes de mostrarse en producción.</p>
+    </div>
+    <div class="rooms-grid">
+      <article class="room-card reveal">
+        <div class="room-card-inner">
+          <img class="room-card-img" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85" alt="Playeras personalizadas con impresión textil DTF" loading="lazy">
+          <div class="room-overlay"></div><div class="room-pills"><span class="room-pill">DTF</span><span class="room-pill">Textil</span></div>
+          <div class="room-content"><p class="room-tag">Impresión textil</p><h3 class="room-name">Playeras personalizadas</h3><p class="room-desc">Impresión DTF para piezas únicas, pedidos por volumen y envíos a todo el país.</p><p class="room-price">Cotizar por WhatsApp</p></div>
+        </div>
+      </article>
+      <article class="room-card reveal d1">
+        <div class="room-card-inner">
+          <img class="room-card-img" src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=900&q=85" alt="Lona y vinil impreso en gran formato" loading="lazy">
+          <div class="room-overlay"></div><div class="room-pills"><span class="room-pill">Lona HD</span><span class="room-pill">Vinil HD</span></div>
+          <div class="room-content"><p class="room-tag">Gran formato</p><h3 class="room-name">Lona y vinil impreso</h3><p class="room-desc">Piezas de alto impacto para promociones, fachadas, eventos, negocios y campañas.</p><p class="room-price">Medidas a la medida</p></div>
+        </div>
+      </article>
+      <article class="room-card reveal d2">
+        <div class="room-card-inner">
+          <img class="room-card-img" src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=900&q=85" alt="Tazas, termos y cilindros personalizados por sublimación" loading="lazy">
+          <div class="room-overlay"></div><div class="room-pills"><span class="room-pill">Sublimación</span><span class="room-pill">Regalos</span></div>
+          <div class="room-content"><p class="room-tag">Personalizados</p><h3 class="room-name">Tazas, gorras y cilindros</h3><p class="room-desc">Productos promocionales y recuerdos personalizados para negocios, eventos y campañas.</p><p class="room-price">Por pieza o volumen</p></div>
+        </div>
+      </article>
+      <article class="room-card reveal">
+        <div class="room-card-inner">
+          <img class="room-card-img" src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=900&q=85" alt="Rotulación vehicular e instalación de vinil" loading="lazy">
+          <div class="room-overlay"></div><div class="room-pills"><span class="room-pill">Car wrap</span><span class="room-pill">Vitrinas</span></div>
+          <div class="room-content"><p class="room-tag">Rotulación</p><h3 class="room-name">Vehículos y espacios</h3><p class="room-desc">Vinil para interiores, exteriores, oficinas, vitrinas y rotulación vehicular.</p><p class="room-price">Instalación disponible</p></div>
+        </div>
+      </article>
+      <article class="room-card reveal d1">
+        <div class="room-card-inner">
+          <img class="room-card-img" src="https://images.unsplash.com/photo-1617791160505-6f00504e3519?auto=format&fit=crop&w=900&q=85" alt="Corte y grabado láser en madera, acrílico y termos" loading="lazy">
+          <div class="room-overlay"></div><div class="room-pills"><span class="room-pill">MDF</span><span class="room-pill">Acrílico</span><span class="room-pill">Termos</span></div>
+          <div class="room-content"><p class="room-tag">Corte y grabado</p><h3 class="room-name">Láser personalizado</h3><p class="room-desc">Placas, trofeos, llaveros, decoración y termos grabados con acabado preciso.</p><p class="room-price">Diseño a medida</p></div>
+        </div>
+      </article>
+      <article class="room-card reveal d2">
+        <div class="room-card-inner">
+          <img class="room-card-img" src="https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?auto=format&fit=crop&w=900&q=85" alt="Tarjetas, volantes, notas de venta e impresión general" loading="lazy">
+          <div class="room-overlay"></div><div class="room-pills"><span class="room-pill">Papelería</span><span class="room-pill">Stickers</span></div>
+          <div class="room-content"><p class="room-tag">Impresión general</p><h3 class="room-name">Papelería y promocionales</h3><p class="room-desc">Tarjetas, volantes, notas de venta, invitaciones, fotografías, boletos y stickers.</p><p class="room-price">Listo para negocio</p></div>
+        </div>
+      </article>
+    </div>
+    <div style="text-align:center;margin-top:46px;"><a href="#contact" class="btn-ghost reveal">Cotizar proyecto</a></div>
+  </div>
+</section>
+
+<section id="amenities" aria-labelledby="amenities-title">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-tag reveal">Cómo funciona</p>
+      <h2 class="section-title reveal d1" id="amenities-title">Un proceso simple para pasar de idea a <em>producción</em></h2>
+      <p class="section-lead reveal d2">Tres pasos para pedir con claridad y evitar vueltas innecesarias.</p>
+    </div>
+    <div class="amenities-grid">
+      <article class="amenity-card reveal">
+        <span class="step-label">Paso 01</span>
+        <div class="amenity-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg></div>
+        <h3 class="amenity-name">Cuéntanos qué necesitas</h3>
+        <p class="amenity-desc">Envía producto, cantidad, medidas, fecha objetivo y si ya tienes diseño o necesitas apoyo gráfico.</p>
+      </article>
+      <article class="amenity-card reveal d1">
+        <span class="step-label">Paso 02</span>
+        <div class="amenity-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div>
+        <h3 class="amenity-name">Ajustamos archivo y cotización</h3>
+        <p class="amenity-desc">Se revisa el material, se define acabado y se prepara una ruta clara de producción.</p>
+      </article>
+      <article class="amenity-card reveal d2">
+        <span class="step-label">Paso 03</span>
+        <div class="amenity-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <h3 class="amenity-name">Producimos y entregamos</h3>
+        <p class="amenity-desc">Tu pieza se imprime, personaliza, corta o instala según el servicio acordado.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="experience" aria-label="Números de GRÁFICAS">
+  <canvas class="section-particles" aria-hidden="true"></canvas>
+  <div class="container">
+    <div class="exp-inner">
+      <div class="exp-left reveal">
+        <p class="section-tag">Capacidad de servicio</p>
+        <h2 class="exp-tagline">Producción para marcas que necesitan <em>impacto</em></h2>
+      </div>
+      <div class="exp-stats reveal d1">
+        <div class="exp-stat"><strong data-count="9">0</strong><span>Líneas de servicio</span></div>
+        <div class="exp-stat"><strong data-count="3">0</strong><span>Procesos clave</span></div>
+        <div class="exp-stat"><strong data-count="32">0</strong><span>Entidades con envío DTF</span></div>
+        <div class="exp-stat"><strong data-count="1">0</strong><span>Taller local en Zacatecas</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" aria-labelledby="gallery-title">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-tag reveal">Galería</p>
+      <h2 class="section-title reveal d1" id="gallery-title">Aplicaciones visuales para negocios <em>memorables</em></h2>
+      <p class="section-lead reveal d2">Muestras visuales del tipo de piezas que una marca puede solicitar para punto de venta, campañas, personalización y presencia exterior.</p>
+    </div>
+    <div class="gallery-grid reveal d1">
+      <div class="gallery-item gi-1"><img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?auto=format&fit=crop&w=1200&q=85" alt="Producción gráfica y acabados de impresión" loading="lazy"><div class="gi-label">Producción gráfica</div></div>
+      <div class="gallery-item gi-2"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=85" alt="Diseño digital previo a impresión" loading="lazy"><div class="gi-label">Diseño previo</div></div>
+      <div class="gallery-item gi-3"><img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=85" alt="Material publicitario para negocio" loading="lazy"><div class="gi-label">Publicidad comercial</div></div>
+      <div class="gallery-item gi-4"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85" alt="Publicidad exterior y presencia de marca" loading="lazy"><div class="gi-label">Exterior y punto de venta</div></div>
+      <div class="gallery-item gi-5"><img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?auto=format&fit=crop&w=900&q=85" alt="Productos personalizados promocionales" loading="lazy"><div class="gi-label">Personalizados</div></div>
+      <div class="gallery-item gi-6"><img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=900&q=85" alt="Materiales de marca para campañas" loading="lazy"><div class="gi-label">Campañas integrales</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonios" aria-labelledby="testimonios-title">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-tag reveal">Antes de cotizar</p>
+      <h2 class="section-title reveal d1" id="testimonios-title">Dudas frecuentes para pedir con <em>claridad</em></h2>
+      <p class="section-lead reveal d2">No se agregaron opiniones de clientes porque no venían confirmadas en la información del proyecto.</p>
+    </div>
+    <div class="reviews-grid reveal d1">
+      <article class="review-card"><div class="review-stars">01</div><p class="review-text">¿Puedo pedir diseño además de impresión?</p><div class="review-author"><div class="review-avatar">D</div><div class="review-name"><strong>Sí, según el proyecto</strong><span>Compártelo por WhatsApp para revisar archivo, medidas y objetivo.</span></div></div></article>
+      <article class="review-card"><div class="review-stars">02</div><p class="review-text">¿Publican precios fijos en la página?</p><div class="review-author"><div class="review-avatar">P</div><div class="review-name"><strong>No sin confirmación</strong><span>Los precios vistos en flyers pueden cambiar; por eso la cotización se valida directo.</span></div></div></article>
+      <article class="review-card"><div class="review-stars">03</div><p class="review-text">¿Qué debo enviar para cotizar rápido?</p><div class="review-author"><div class="review-avatar">C</div><div class="review-name"><strong>Producto, cantidad y fecha</strong><span>Si tienes archivo, adjúntalo; si no, describe la idea y el uso final.</span></div></div></article>
+    </div>
+    <div style="text-align:center;"><a href="#contact" class="btn-ghost-dark reveal">Resolver por WhatsApp</a></div>
+  </div>
+</section>
+
+<section id="contact" aria-labelledby="contact-title">
+  <canvas class="section-particles" aria-hidden="true"></canvas>
+  <div class="container">
+    <div class="section-header">
+      <p class="section-tag reveal">Contacto</p>
+      <h2 class="section-title reveal d1" id="contact-title">Solicita tu <em>cotización</em></h2>
+      <p class="section-lead reveal d2">Completa el formulario y se abrirá WhatsApp con tu mensaje listo. No se envía correo ni se queda cargando.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-left reveal">
+        <p class="section-tag no-lines">Formulario</p>
+        <h3 class="contact-title">Tu próxima pieza publicitaria comienza aquí</h3>
+        <p class="contact-sub">Describe el servicio, cantidad y fecha deseada para recibir orientación directa.</p>
+        <form id="booking-form" novalidate>
+          <div class="form-row">
+            <div class="form-group"><label for="nombre">Nombre completo</label><input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="name"></div>
+            <div class="form-group"><label for="telefono">Teléfono / WhatsApp</label><input type="tel" id="telefono" name="telefono" placeholder="+52 492 000 0000" required autocomplete="tel"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="checkin">Fecha deseada</label><input type="date" id="checkin" name="checkin" required></div>
+            <div class="form-group"><label for="habitacion">Servicio</label><select id="habitacion" name="habitacion"><option value="">Seleccionar...</option><option>Impresión DTF</option><option>Sublimación</option><option>Lona impresa HD</option><option>Vinil impreso HD</option><option>Rotulación vehicular o espacios</option><option>Corte y grabado láser</option><option>Toldos enrollables</option><option>Papelería e impresión general</option><option>Publicidad exterior</option><option>Otro</option></select></div>
+          </div>
+          <div class="form-group"><label for="huespedes">Cantidad aproximada</label><select id="huespedes" name="huespedes"><option>1 pieza</option><option selected>2 a 12 piezas</option><option>13 a 50 piezas</option><option>Más de 50 piezas</option><option>Por definir</option></select></div>
+          <div class="form-group"><label for="mensaje">Detalles</label><textarea id="mensaje" name="mensaje" placeholder="Medidas, material, colores, idea de diseño, uso final o fecha límite..."></textarea></div>
+          <button type="submit" class="form-submit">Enviar solicitud por WhatsApp</button>
+        </form>
+      </div>
+      <div class="contact-right reveal d1">
+        <p class="section-tag no-lines">Datos confirmados</p>
+        <h3 class="contact-title">GRÁFICAS Diseño y Publicidad</h3>
+        <div class="channels">
+          <a href="https://wa.me/5214921067050" target="_blank" rel="noopener" class="channel" aria-label="WhatsApp de GRÁFICAS"><div class="ch-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg></div><div class="ch-info"><strong>WhatsApp y llamadas</strong><span>492 106 7050</span></div><svg class="ch-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61566544267645" target="_blank" rel="noopener" class="channel" aria-label="Facebook Graficas Zacatecas"><div class="ch-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div><div class="ch-info"><strong>Facebook</strong><span>Graficas Zacatecas</span></div><svg class="ch-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Calzada+Luis+Moya+403-B%2C+Zacatecas%2C+Zacatecas" target="_blank" rel="noopener" class="channel" aria-label="Ubicación de GRÁFICAS"><div class="ch-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="ch-info"><strong>Dirección</strong><span>Calzada Luis Moya No. 403-B, Zacatecas, Zacatecas</span></div><svg class="ch-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="9 18 15 12 9 6"/></svg></a>
+          <div class="channel" style="cursor:default;"><div class="ch-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="ch-info"><strong>Atención</strong><span>Confirma horario y disponibilidad por WhatsApp</span></div></div>
+        </div>
+        <div class="map-box"><iframe title="Mapa de GRÁFICAS Diseño y Publicidad en Zacatecas" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Calzada%20Luis%20Moya%20403-B%2C%20Zacatecas%2C%20Zacatecas&output=embed"></iframe></div>
+        <div class="contact-quote">Para agilizar tu cotización, comparte medidas, cantidades, fecha deseada y si ya cuentas con archivo listo para imprimir.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo-wrap"><img src="assets/logo-graficas.png" alt="GRÁFICAS Diseño y Publicidad"></div>
+      <p>Diseño, impresión y publicidad para negocios que necesitan verse claros, profesionales y memorables.</p>
+    </div>
+    <div class="footer-col"><h4>Navegación</h4><ul><li><a href="#about">Por qué elegirnos</a></li><li><a href="#rooms">Servicios</a></li><li><a href="#amenities">Proceso</a></li><li><a href="#gallery">Galería</a></li></ul></div>
+    <div class="footer-col"><h4>Servicios</h4><ul><li><a href="#rooms">Impresión DTF</a></li><li><a href="#rooms">Gran formato</a></li><li><a href="#rooms">Sublimación</a></li><li><a href="#rooms">Rotulación y láser</a></li></ul></div>
+    <div class="footer-col"><h4>Contacto</h4><ul><li><a href="https://wa.me/5214921067050" target="_blank" rel="noopener">WhatsApp: 492 106 7050</a></li><li><a href="https://www.facebook.com/profile.php?id=61566544267645" target="_blank" rel="noopener">Facebook: Graficas Zacatecas</a></li><li><a href="#contact">Solicitar cotización</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 GRÁFICAS Diseño y Publicidad. Todos los derechos reservados.</p>
+    <div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=61566544267645" target="_blank" rel="noopener" class="social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      <a href="https://wa.me/5214921067050" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5214921067050" id="wa-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <div class="wa-ring-2" aria-hidden="true"></div><div class="wa-ring" aria-hidden="true"></div>
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>
+</a>
+
+<script>
+(function () {
+  'use strict';
+  var WA_NUMBER = '5214921067050';
+
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      var el = document.getElementById('loader');
+      if (el) el.classList.add('hidden');
+    }, 2300);
+  });
+
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function () {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  var ham = document.getElementById('ham');
+  var mob = document.getElementById('mobile-menu');
+  var mOpen = false;
+  function closeMob() {
+    mOpen = false;
+    ham.classList.remove('open');
+    mob.classList.remove('open');
+    ham.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+  window.closeMob = closeMob;
+  ham.addEventListener('click', function () {
+    mOpen = !mOpen;
+    ham.classList.toggle('open', mOpen);
+    mob.classList.toggle('open', mOpen);
+    ham.setAttribute('aria-expanded', String(mOpen));
+    document.body.style.overflow = mOpen ? 'hidden' : '';
+  });
+
+  function startParticles(canvas, opts) {
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    var W, H, pts = [], raf, running = false;
+    var cols = opts && opts.light ? [
+      'rgba(0,174,239,', 'rgba(236,0,140,', 'rgba(255,209,0,'
+    ] : [
+      'rgba(0,174,239,', 'rgba(236,0,140,', 'rgba(255,209,0,', 'rgba(255,255,255,'
+    ];
+    function resize() {
+      var rect = canvas.getBoundingClientRect();
+      W = canvas.width = Math.max(1, Math.floor(rect.width || window.innerWidth));
+      H = canvas.height = Math.max(1, Math.floor(rect.height || window.innerHeight));
+      pts = [];
+      var n = Math.min(opts && opts.max || 110, Math.max(38, Math.floor(W / (opts && opts.div || 16))));
+      for (var i = 0; i < n; i++) pts.push(new Pt());
+    }
+    function Pt() { this.x = Math.random() * W; this.y = Math.random() * H; this.r = Math.random() * 2.6 + .8; this.vx = (Math.random() - .5) * .36; this.vy = (Math.random() - .5) * .36; this.a = Math.random() * .45 + .18; this.c = Math.floor(Math.random() * cols.length); }
+    Pt.prototype.step = function () { this.x += this.vx; this.y += this.vy; if (this.x < -5) this.x = W + 5; if (this.x > W + 5) this.x = -5; if (this.y < -5) this.y = H + 5; if (this.y > H + 5) this.y = -5; };
+    Pt.prototype.draw = function () { ctx.beginPath(); ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2); ctx.fillStyle = cols[this.c] + this.a + ')'; ctx.fill(); };
+    function loop() {
+      ctx.clearRect(0, 0, W, H);
+      pts.forEach(function (p) { p.step(); p.draw(); });
+      for (var a = 0; a < pts.length - 1; a++) {
+        for (var b = a + 1; b < pts.length; b++) {
+          var dx = pts[a].x - pts[b].x, dy = pts[a].y - pts[b].y, d = Math.sqrt(dx * dx + dy * dy), max = 118;
+          if (d < max) { ctx.beginPath(); ctx.moveTo(pts[a].x, pts[a].y); ctx.lineTo(pts[b].x, pts[b].y); ctx.strokeStyle = 'rgba(0,174,239,' + ((1 - d / max) * .13) + ')'; ctx.lineWidth = .55; ctx.stroke(); }
+        }
+      }
+      raf = requestAnimationFrame(loop);
+    }
+    resize();
+    window.addEventListener('resize', resize, { passive: true });
+    var io = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting && !running) { running = true; loop(); }
+      if (!entries[0].isIntersecting && running) { running = false; cancelAnimationFrame(raf); raf = null; }
+    }, { threshold: .02 });
+    io.observe(canvas);
+  }
+  startParticles(document.getElementById('particle-canvas'), { max: 130, div: 11, light: true });
+  document.querySelectorAll('.section-particles').forEach(function (c) { startParticles(c, { max: 80, div: 18 }); });
+
+  (function () {
+    var words = ['DTF', 'sublimación', 'gran formato', 'rotulación', 'láser', 'papelería'];
+    var wi = 0, ci = 0, deleting = false, el = document.getElementById('typer');
+    if (!el) return;
+    function tick() {
+      var w = words[wi];
+      if (!deleting) {
+        el.textContent = w.slice(0, ++ci);
+        if (ci === w.length) { deleting = true; setTimeout(tick, 1750); return; }
+        setTimeout(tick, 100);
+      } else {
+        el.textContent = w.slice(0, --ci);
+        if (ci === 0) { deleting = false; wi = (wi + 1) % words.length; }
+        setTimeout(tick, 58);
+      }
+    }
+    setTimeout(tick, 2850);
+  }());
+
+  var revealEls = document.querySelectorAll('.reveal');
+  var revealIO = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revealIO.unobserve(e.target);
+      }
+    });
+  }, { threshold: .09, rootMargin: '0px 0px -34px 0px' });
+  revealEls.forEach(function (el) { revealIO.observe(el); });
+
+  var counted = false;
+  var stats = document.querySelectorAll('[data-count]');
+  function animateCount(el) {
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    var start = 0, dur = 1350, t0 = performance.now();
+    function frame(now) {
+      var p = Math.min(1, (now - t0) / dur);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(start + (target - start) * eased);
+      if (p < 1) requestAnimationFrame(frame);
+      else el.textContent = target + (target === 1 ? '' : '+');
+    }
+    requestAnimationFrame(frame);
+  }
+  var exp = document.getElementById('experience');
+  if (exp && stats.length) {
+    new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting && !counted) {
+        counted = true;
+        stats.forEach(animateCount);
+      }
+    }, { threshold: .35 }).observe(exp);
+  }
+
+  var form = document.getElementById('booking-form');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var n = document.getElementById('nombre').value.trim();
+      var t = document.getElementById('telefono').value.trim();
+      var fecha = document.getElementById('checkin').value;
+      var servicio = document.getElementById('habitacion').value;
+      var cantidad = document.getElementById('huespedes').value;
+      var m = document.getElementById('mensaje').value.trim();
+      if (!n || !t || !fecha) {
+        alert('Por favor completa nombre, teléfono y fecha deseada.');
+        return;
+      }
+      var msg = [
+        'GRÁFICAS Diseño y Publicidad - Solicitud de cotización',
+        '',
+        'Nombre: ' + n,
+        'Teléfono: ' + t,
+        'Fecha deseada: ' + fecha,
+        'Servicio: ' + (servicio || 'Por definir'),
+        'Cantidad aproximada: ' + cantidad,
+        m ? 'Detalles: ' + m : null,
+        '',
+        'Solicito cotización y orientación. Gracias.'
+      ].filter(Boolean).join('\n');
+      window.open('https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+    });
+    var today = new Date().toISOString().split('T')[0];
+    document.getElementById('checkin').min = today;
+  }
+}());
+</script>
+</body>
+</html>
